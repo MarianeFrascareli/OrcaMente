@@ -1,0 +1,210 @@
+/* Define a cor de fundo do site */
+body {
+    background-color: #F0FCF3; /* Cor de fundo personalizada */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Define a fonte padrão */
+}
+
+/* Define o estilo do cabeçalho fixo */
+header {
+    height: 80px; /* Altura fixa do cabeçalho */
+    display: flex; /* Usar flexbox para o layout */
+    align-items: center; /* Centralizar verticalmente o conteúdo */
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #62F083; /* Cor de fundo personalizada do cabeçalho */
+    position: fixed; /* Fixar o cabeçalho no topo */
+    top: 0;
+    left: 0;
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura da página */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+    box-sizing: border-box; /* Inclui o padding e a borda dentro da largura total */
+}
+
+/* Garante que o conteúdo não fique escondido atrás do cabeçalho */
+body::before {
+    content: "";
+    display: block;
+    height: 96px; /* Altura do cabeçalho */
+}
+
+/* Ajustes no container que envolve o logo e o menu */
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Distribui o logo à esquerda e o menu à direita */
+    align-items: center; /* Centralizar verticalmente */
+    width: 100%;
+}
+
+/* Alinha o logo e o texto "OrçaMente" */
+.logo-container {
+    display: flex;
+    align-items: center; /* Centralizar o logo verticalmente */
+}
+
+/* Estilo para o menu de navegação */
+.navbar {
+    height: 100%; /* Garante que ocupe toda a altura do cabeçalho */
+}
+
+.navbar-collapse {
+    display: flex;
+    align-items: center; /* Centralizar verticalmente os itens */
+    justify-content: flex-end; /* Alinhar itens à direita */
+    height: 100%; /* Preenche a altura do cabeçalho */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Centralizar os itens verticalmente */
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove os marcadores da lista */
+}
+
+/* Ajusta o espaçamento entre os itens */
+.navbar-nav .nav-item {
+    margin-left: 24px; /* Espaço entre os itens do menu */
+}
+
+/* Remove o espaçamento no primeiro item */
+.navbar-nav .nav-item:first-child {
+    margin-left: 0;
+}
+
+/* Estilo dos links */
+.navbar-nav .nav-link {
+    color: #ffffff; /* Cor branca */
+    font-weight: 600; /* Negrito */
+    display: flex;
+    align-items: center; /* Centralizar verticalmente o texto */
+    height: 100%; /* Preencher a altura do cabeçalho */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Garantir que a largura dos elementos não cause problemas de overflow */
+.navbar-nav .nav-item {
+    white-space: nowrap; /* Evita quebra de linha dentro dos itens de menu */
+}
+
+/* Estilo para o item ativo do menu */
+.navbar-nav .nav-link.active {
+    position: relative; /* Necessário para usar o ::after */
+}
+
+.navbar-nav .nav-link.active::after {
+    content: ""; /* Adiciona um conteúdo vazio */
+    position: absolute; /* Permite posicionamento relativo ao pai */
+    left: 50%; /* Começa no centro do link */
+    transform: translateX(-50%); /* Centraliza o retângulo */
+    bottom: -4px; /* Um pouco abaixo do link */
+    width: 18px; /* Largura do retângulo */
+    height: 2px; /* Altura do retângulo */
+    background-color: #ffffff; /* Cor do retângulo (branca) */
+    border-radius: 1px; /* Cantos levemente arredondados */
+}
+
+
+
+/* Estilo para o container do saldo disponível */
+.saldo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px; /* Ajusta a distância inferior */
+}
+
+/* Estilo para o container de edição */
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilo para os itens de edição */
+.edit-item {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.saldo-box {
+    background-color: #ffffff;
+    border: 1px solid #62F083;
+    border-radius: 16px;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Estilo do formulário de edição, inicialmente oculto */
+.edit-form {
+    display: none; /* Oculta o formulário de edição por padrão */
+    margin-top: 10px;
+    background-color: #ffffff;
+    border: 1px solid #62F083;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.edit-form input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #62F083;
+    border-radius: 4px;
+}
+
+/* Estilo do campo de descrição do gasto com margem superior */
+.edit-form input#expense-description {
+    margin-top: 10px; /* Ajusta a distância superior */
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #62F083;
+    border-radius: 4px;
+}
+
+.edit-form .save-button {
+    margin-top: 10px;
+    background-color: #62F083;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.edit-form .save-button:hover {
+    background-color: #4CAF50;
+}
+
+
+/* Estilo do botão de reinício */
+.restart-container {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    margin-top: 20px;
+    position: fixed; /* Faz o botão ficar fixo na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da borda direita da tela */
+}
+
+.restart-button {
+    background-color: transparent; /* Sem cor de fundo */
+    border: none;
+    color: #62F083; /* Cor da escrita do site (ajuste conforme necessário) */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    color: #4CAF50; /* Cor um pouco mais escura para o texto quando o botão é sobreposto (ajuste conforme necessário) */
+}

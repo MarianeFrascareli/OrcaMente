@@ -1,0 +1,121 @@
+/* Define a cor de fundo do site */
+body {
+    background-color: #F0FCF3; /* Cor de fundo personalizada */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Define a fonte padrão */
+    height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Estilo para o container principal de login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 60px; /* Aumentei o padding para expandir a caixa */
+    width: 100%;
+    max-width: 500px; /* Aumentei a largura máxima */
+    box-sizing: border-box;
+}
+
+/* Estilo para o container do logo na página de login */
+.login-logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; /* Aumentei a margem inferior para espaçamento */
+}
+
+.login-logo {
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-bottom: 32px; /* Espaçamento entre os logos */
+}
+
+.login-logo-text {
+    width: 416px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+/* Estilo para o formulário de login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Estilo para os campos de entrada */
+.form-group {
+    margin-bottom: 25px; /* Aumentei o espaçamento entre os grupos */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 18px; /* Aumentei o tamanho da fonte */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px; /* Aumentei o padding dos inputs */
+    border: 1px solid #62F083;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Estilo para o botão de login */
+.login-button {
+    background-color: #62F083;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px; /* Aumentei o padding para tornar o botão maior */
+    font-size: 18px; /* Aumentei o tamanho da fonte */
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.login-button:hover {
+    background-color: #4CAF50;
+}
+
+/* Estilo para o botão de primeiro acesso */
+.first-access-button {
+    background-color: transparent;
+    color: #62F083;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.first-access-button:hover {
+    color: #4CAF50;
+}
+
+/* Ajuste o layout para telas pequenas */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px; /* Ajuste de padding para telas menores */
+        max-width: 90%;
+    }
+
+    .login-logo-container .login-logo, .login-logo-container .login-logo-text {
+        width: auto;
+        max-width: 80%; /* Ajuste a largura máxima se necessário */
+    }
+
+    .form-group label, .form-group input, .login-button, .first-access-button {
+        font-size: 14px;
+    }
+}
