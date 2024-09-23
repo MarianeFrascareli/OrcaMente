@@ -1,0 +1,25 @@
+{
+  "name": "orcamente",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "scripts": {
+    "start": "node index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarianeFrascareli/OrcaMente.git"
+  },
+  "author": "Mariane Frascareli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarianeFrascareli/OrcaMente/issues"
+  },
+  "homepage": "https://github.com/MarianeFrascareli/OrcaMente#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

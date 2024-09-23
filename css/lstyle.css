@@ -67,7 +67,7 @@ body {
     width: 100%;
     padding: 12px; /* Aumentei o padding dos inputs */
     border: 1px solid #62F083;
-    border-radius: 8px;
+    border-radius:16px;
     font-size: 16px;
 }
 
@@ -76,7 +76,7 @@ body {
     background-color: #62F083;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 16px;
     padding: 14px; /* Aumentei o padding para tornar o botão maior */
     font-size: 18px; /* Aumentei o tamanho da fonte */
     cursor: pointer;
