@@ -25,6 +25,20 @@ body {
     box-sizing: border-box;
 }
 
+.login-logo-container p {
+    text-align: center; /* Centraliza o texto */
+    font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+    line-height: 1.5; /* Aumenta o espaçamento entre as linhas */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0 10px; /* Adiciona um pouco de padding nas laterais */
+}
+
+@media (max-width: 480px) {
+    .login-logo-container p {
+        font-size: 16px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}
+
 /* Estilo para o container do logo na página de login */
 .login-logo-container {
     display: flex;
